@@ -17,10 +17,11 @@ GENERAL STYLES
 
 body {
 	font-family: $serif;
-	font-size: 120%;
+	font-size: 100%;
 	line-height: 1.6;
 	font-weight: 400;
-	color: rgba($text-color, .8);
+	background-color: $white;
+	// color: rgba($text-color, .8);
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
 }
@@ -32,7 +33,8 @@ style a page via class
 // A good Start
 
 .rtl {}                           /* for sites that are read right to left (i.e. hebrew) */
-.home {}                          /* home page */
+     
+
 .blog {}                          /* blog template page */
 .archive {}                       /* archive page */
 .date {}                          /* date archive page */
@@ -72,8 +74,11 @@ LAYOUT & GRID STYLES
 *********************/
 
 .wrap {
-}
 
+}
+.masonry-wrapper {
+
+}
 /*********************
 LINK STYLES
 *********************/

@@ -115,6 +115,16 @@ jQuery(document).ready(function($) {
    * You can remove this if you don't need it
   */
   loadGravatars();
+  //Masonry
+  $('.masonry-wrapper').masonry({
+    // options
+    columnWidth: '.post-sizing',
+    gutter: '.post-gutter',
+    itemSelector: '.post',
+    percentPosition: true
+  });
+
+  $(".entry-content").fitVids();
 
 
 }); /* end of as page load scripts */

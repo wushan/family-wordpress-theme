@@ -7,7 +7,7 @@
 					<main id="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
+							
 							<?php
 								/*
 								 * Ah, post formats. Nature's greatest mystery (aside from the sloth).

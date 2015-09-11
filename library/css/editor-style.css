@@ -187,6 +187,12 @@ if you're going to use webfonts, be sure to check your weights
 http://css-tricks.com/watch-your-font-weight/
 */ /* removing text decoration from all headline links */ }
 body#tinymce.wp-editor h1 a, body#tinymce.wp-editor h2 a, body#tinymce.wp-editor h3 a, body#tinymce.wp-editor h4 a, body#tinymce.wp-editor h5 a, body#tinymce.wp-editor h6 a { text-decoration: none; }
+body#tinymce.wp-editor h1 { font-size: 1.6em; line-height: 1.4; }
+body#tinymce.wp-editor h2 { font-size: 1.5em; }
+body#tinymce.wp-editor h3 { font-size: 1.4em; }
+body#tinymce.wp-editor h4 { font-size: 1.3em; }
+body#tinymce.wp-editor h5 { font-size: 1.2em; }
+body#tinymce.wp-editor h6 { font-size: 1.1em; }
 body#tinymce.wp-editor a, body#tinymce.wp-editor a:visited { color: #000000; /* on hover */ /* on click */ }
 body#tinymce.wp-editor a:hover, body#tinymce.wp-editor a:focus, body#tinymce.wp-editor a:visited:hover, body#tinymce.wp-editor a:visited:focus { color: #f01d4f; }
 body#tinymce.wp-editor a:link, body#tinymce.wp-editor a:visited:link { -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
@@ -198,13 +204,13 @@ body#tinymce.wp-editor h3, body#tinymce.wp-editor .h3 { font-size: 1.125em; }
 body#tinymce.wp-editor h4, body#tinymce.wp-editor .h4 { font-size: 1.1em; font-weight: 700; }
 body#tinymce.wp-editor h5, body#tinymce.wp-editor .h5 { font-size: 0.846em; line-height: 2.09em; text-transform: uppercase; letter-spacing: 2px; }
 body#tinymce.wp-editor p { margin: 0 0 1.5em; }
-body#tinymce.wp-editor table { width: 100%; border: 1px solid #dddddd; margin-bottom: 1.5em; }
+body#tinymce.wp-editor table { width: 100%; border: 1px solid #cccccc; margin-bottom: 1.5em; }
 body#tinymce.wp-editor table caption { margin: 0 0 7px; font-size: 0.75em; color: #9fa6b4; text-transform: uppercase; letter-spacing: 1px; }
-body#tinymce.wp-editor tr { border-bottom: 1px solid #dddddd; }
+body#tinymce.wp-editor tr { border-bottom: 1px solid #cccccc; }
 body#tinymce.wp-editor tr:nth-child(even) { background-color: #f7f7f7; }
-body#tinymce.wp-editor td { padding: 7px; border-right: 1px solid #dddddd; }
+body#tinymce.wp-editor td { padding: 7px; border-right: 1px solid #cccccc; }
 body#tinymce.wp-editor td:last-child { border-right: 0; }
-body#tinymce.wp-editor th { background-color: #f7f7f7; border-bottom: 1px solid #dddddd; border-right: 1px solid #dddddd; }
+body#tinymce.wp-editor th { background-color: #f7f7f7; border-bottom: 1px solid #cccccc; border-right: 1px solid #cccccc; }
 body#tinymce.wp-editor th:last-child { border-right: 0; }
 body#tinymce.wp-editor blockquote { margin: 0 0 1.5em 0.75em; padding: 0 0 0 0.75em; border-left: 3px solid #2980b9; font-style: italic; color: #9fa6b4; }
 body#tinymce.wp-editor dd { margin-left: 0; font-size: 0.9em; color: #787878; margin-bottom: 1.5em; }

@@ -212,6 +212,18 @@ http://css-tricks.com/watch-your-font-weight/
 */ /* removing text decoration from all headline links */ }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { text-decoration: none; }
 
+h1 { font-size: 1.6em; line-height: 1.4; }
+
+h2 { font-size: 1.5em; }
+
+h3 { font-size: 1.4em; }
+
+h4 { font-size: 1.3em; }
+
+h5 { font-size: 1.2em; }
+
+h6 { font-size: 1.1em; }
+
 /******************************************************************
 Site Name:
 Author:
@@ -279,6 +291,10 @@ probably best not to use it. I mean, were you going to anyway? */
   .g-1-12 { width: 5.7142857143%; float: left; margin-right: 2.8571428571%; }
   .g-1-12.no-gutters { width: 5.7142857143%; float: left; padding: 0; }
   .grid:last-child { float: right; margin-right: 0; } }
+.transition { -webkit-transition: 0.3s all ease-in-out; transition: 0.3s all ease-in-out; }
+
+.transition-slow, .feature-thumb { -webkit-transition: 1s all ease-in-out; transition: 1s all ease-in-out; }
+
 img { max-width: 100%; height: auto; display: block; }
 
 /******************************************************************
@@ -358,8 +374,8 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
 /*********************
 INPUTS
 *********************/
-input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], select, textarea, .field { display: block; height: 40px; line-height: 1em; padding: 0 12px; margin-bottom: 14px; font-size: 1em; color: #000000; border-radius: 3px; vertical-align: middle; box-shadow: none; border: 0; width: 100%; max-width: 400px; font-family: "Lato", "proxima-nova", "Helvetica Neue", Helvetica, Arial, "source-han-sans-traditional", sans-serif; background-color: #dddddd; -webkit-transition: background-color 0.24s ease-in-out; transition: background-color 0.24s ease-in-out; }
-input[type="text"]:focus, input[type="text"]:active, input[type="password"]:focus, input[type="password"]:active, input[type="datetime"]:focus, input[type="datetime"]:active, input[type="datetime-local"]:focus, input[type="datetime-local"]:active, input[type="date"]:focus, input[type="date"]:active, input[type="month"]:focus, input[type="month"]:active, input[type="time"]:focus, input[type="time"]:active, input[type="week"]:focus, input[type="week"]:active, input[type="number"]:focus, input[type="number"]:active, input[type="email"]:focus, input[type="email"]:active, input[type="url"]:focus, input[type="url"]:active, input[type="search"]:focus, input[type="search"]:active, input[type="tel"]:focus, input[type="tel"]:active, input[type="color"]:focus, input[type="color"]:active, select:focus, select:active, textarea:focus, textarea:active, .field:focus, .field:active { background-color: #e7e7e7; outline: none; }
+input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], select, textarea, .field { display: block; height: 40px; line-height: 1em; padding: 0 12px; margin-bottom: 14px; font-size: 1em; color: #000000; border-radius: 3px; vertical-align: middle; box-shadow: none; border: 0; width: 100%; max-width: 400px; font-family: "Lato", "proxima-nova", "Helvetica Neue", Helvetica, Arial, "source-han-sans-traditional", sans-serif; background-color: #cccccc; -webkit-transition: background-color 0.24s ease-in-out; transition: background-color 0.24s ease-in-out; }
+input[type="text"]:focus, input[type="text"]:active, input[type="password"]:focus, input[type="password"]:active, input[type="datetime"]:focus, input[type="datetime"]:active, input[type="datetime-local"]:focus, input[type="datetime-local"]:active, input[type="date"]:focus, input[type="date"]:active, input[type="month"]:focus, input[type="month"]:active, input[type="time"]:focus, input[type="time"]:active, input[type="week"]:focus, input[type="week"]:active, input[type="number"]:focus, input[type="number"]:active, input[type="email"]:focus, input[type="email"]:active, input[type="url"]:focus, input[type="url"]:active, input[type="search"]:focus, input[type="search"]:active, input[type="tel"]:focus, input[type="tel"]:active, input[type="color"]:focus, input[type="color"]:active, select:focus, select:active, textarea:focus, textarea:active, .field:focus, .field:active { background-color: #d6d6d6; outline: none; }
 input[type="text"].error, input[type="text"].is-invalid, input[type="password"].error, input[type="password"].is-invalid, input[type="datetime"].error, input[type="datetime"].is-invalid, input[type="datetime-local"].error, input[type="datetime-local"].is-invalid, input[type="date"].error, input[type="date"].is-invalid, input[type="month"].error, input[type="month"].is-invalid, input[type="time"].error, input[type="time"].is-invalid, input[type="week"].error, input[type="week"].is-invalid, input[type="number"].error, input[type="number"].is-invalid, input[type="email"].error, input[type="email"].is-invalid, input[type="url"].error, input[type="url"].is-invalid, input[type="search"].error, input[type="search"].is-invalid, input[type="tel"].error, input[type="tel"].is-invalid, input[type="color"].error, input[type="color"].is-invalid, select.error, select.is-invalid, textarea.error, textarea.is-invalid, .field.error, .field.is-invalid { color: #fbe3e4; border-color: #fbe3e4; background-color: #fff; background-position: 99% center; background-repeat: no-repeat; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2NDM0NDREQkYwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2NDM0NDREQ0YwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjQ3ODRGRkE2RjA0QTExRTI5MjhERkZBMTMzMDYwNzI2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjY0MzQ0NERBRjA0QjExRTI5MjhERkZBMTMzMDYwNzI2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+U8iT5wAAAedJREFUeNqk1U9I02Ecx/HtV3aIFAc1hcRDUoGXRAq0oNLA2CrsEFmHbikZu0iQYIFGYAiegkCpLipBxPpDEBMUzB0EhSG2LhG7hMR2GviPgUTvB57Bw8P3+U23B16HPX8+e/b8nt93wezZSMCnhXETF3AcB5BDCnH8Dq98ExcGHcFn8Ah3cdDni+fxnPDv9oAnTB7CKu6VCFXtChZy56LxUjt+jfuB8toSOth9wd7xWAWhqrUjYR/FRTwWJm+iIPT/w7bQf5ljiZnBg45dtKFX6H+LU8gIY8OEV6vgTkStwXWE8BPTGDHGPqNPz2mCfSOOYkA99TvCt1bhGPL68zMcwmncMuape10jrI+q4BbHi/FLn31S9z2x5tRhTc+1W506ipM+T3oRD4X+8+qtc4SqFvL0z/Fr14S+Szjis8bz9Lvvaq8cwS/wwGfdlqfPSWqTiFlX77o13u9Ym1PBs8JAytpRoy44X9Ft9E/gvbA+rYKn8NcaaMVc8UHgBw4b9/iqUQZ6hOAJFbyDcUflmsEX4a6+wTtHGfhAIUqa1U29Zc2BytouThD8x6xuN5CtMPi2CrXLZkZf/HyZoRFCP7n+QVR4PV7uI/AjGghN7OU/r1ilnqILtfpNC+o6vIFljBKYlhb/F2AAgaBsWR5wRiIAAAAASUVORK5CYII=); outline-color: #fbe3e4; }
 input[type="text"].success, input[type="text"].is-valid, input[type="password"].success, input[type="password"].is-valid, input[type="datetime"].success, input[type="datetime"].is-valid, input[type="datetime-local"].success, input[type="datetime-local"].is-valid, input[type="date"].success, input[type="date"].is-valid, input[type="month"].success, input[type="month"].is-valid, input[type="time"].success, input[type="time"].is-valid, input[type="week"].success, input[type="week"].is-valid, input[type="number"].success, input[type="number"].is-valid, input[type="email"].success, input[type="email"].is-valid, input[type="url"].success, input[type="url"].is-valid, input[type="search"].success, input[type="search"].is-valid, input[type="tel"].success, input[type="tel"].is-valid, input[type="color"].success, input[type="color"].is-valid, select.success, select.is-valid, textarea.success, textarea.is-valid, .field.success, .field.is-valid { color: #e6efc2; border-color: #e6efc2; background-color: #fff; background-position: 99% center; background-repeat: no-repeat; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2NDM0NDRERkYwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2NDM0NDRFMEYwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjY0MzQ0NERERjA0QjExRTI5MjhERkZBMTMzMDYwNzI2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjY0MzQ0NERFRjA0QjExRTI5MjhERkZBMTMzMDYwNzI2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+7olkTQAAAfhJREFUeNqklU9oE0EUhzdroWjw0tBeWlDxkEaIp55TsCU9VKIgCrHBelA8CQ1Kr1WPbZrQ3gqtQqvGqxpQc2jBk6BIIaAGD4qNCKURpDSKiPi98gLDsJt//uBjsztvfnk7895sIPAw6/joGMThFJyAXn2+A+9gA57/TaY/eU0OeBgfhGm4DiGnsb7DAszxBz/NAdcKjMJLuNWCqagHbsscN5+L+hmH4QkMOe1L5jzFfNA2PgT34ajTuY7AGuZB0/hmh5m+gS0r8xv1zRvg+gGCHZiOwnF4DP3iB3sQkYxPd2C6CWfhB9Xwlus5+K1j4jXuaq3a+gM1H9OPcAa+7q9lPidZJqHbiIm7Wg22rsEI7FrPSzAMX/T+ADyAKSsu7Fr1KplehLvwCs5DvfBf65p+MypqRbO1FXK9utH4/QKuaqYTsG3E3INJv00Q46px3+XxanJ/Ute2/vqP4FKDza2KcdljIKdnhS0xXYULTaqmLMZFn8FFSFtvt6x70ExFCS5oUXspq2ssa7oEl1swFa+CGFdgtkHgPDyDKy02zyxNU6lXRUZb1EuHYayNNs+Yh5B0WQo+/8fpJnNTZFuzz2OpjoQ2QruSOQlMy35fEGmEGMxY9e1brxobw7TkWA1h6xfckUPb+JhGoE/Hpfvew7qUld/H9J8AAwDpw3WYrxcZ3QAAAABJRU5ErkJggg==); outline-color: #e6efc2; }
 input[type="text"][disabled], input[type="text"].is-disabled, input[type="password"][disabled], input[type="password"].is-disabled, input[type="datetime"][disabled], input[type="datetime"].is-disabled, input[type="datetime-local"][disabled], input[type="datetime-local"].is-disabled, input[type="date"][disabled], input[type="date"].is-disabled, input[type="month"][disabled], input[type="month"].is-disabled, input[type="time"][disabled], input[type="time"].is-disabled, input[type="week"][disabled], input[type="week"].is-disabled, input[type="number"][disabled], input[type="number"].is-disabled, input[type="email"][disabled], input[type="email"].is-disabled, input[type="url"][disabled], input[type="url"].is-disabled, input[type="search"][disabled], input[type="search"].is-disabled, input[type="tel"][disabled], input[type="tel"].is-disabled, input[type="color"][disabled], input[type="color"].is-disabled, select[disabled], select.is-disabled, textarea[disabled], textarea.is-disabled, .field[disabled], .field.is-disabled { cursor: not-allowed; border-color: #cfcfcf; opacity: 0.6; }
@@ -392,14 +408,13 @@ and will be used across all viewports.
 /*********************
 GENERAL STYLES
 *********************/
-body { font-family: "freight-text-pro", "Georgia", Cambria, Times New Roman, Times, "source-han-sans-traditional", serif; font-size: 120%; line-height: 1.6; font-weight: 400; color: rgba(0, 0, 0, 0.8); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body { font-family: "freight-text-pro", "Georgia", Cambria, Times New Roman, Times, "source-han-sans-traditional", serif; font-size: 100%; line-height: 1.6; font-weight: 400; background-color: #fff; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
 /********************
 WORDPRESS BODY CLASSES
 style a page via class
 ********************/
 /* for sites that are read right to left (i.e. hebrew) */
-/* home page */
 /* blog template page */
 /* archive page */
 /* date archive page */
@@ -454,7 +469,7 @@ PAGE NAVI STYLES
 
 .pagination { text-align: center; }
 .pagination ul { display: inline-block; background-color: #fff; white-space: nowrap; padding: 0; clear: both; border-radius: 3px; }
-.pagination li { padding: 0; margin: 0; float: left; display: inline; overflow: hidden; border-right: 1px solid #dddddd; }
+.pagination li { padding: 0; margin: 0; float: left; display: inline; overflow: hidden; border-right: 1px solid #cccccc; }
 .pagination a, .pagination span { margin: 0; text-decoration: none; padding: 0; line-height: 1em; font-size: 1em; font-weight: normal; padding: 0.75em; min-width: 1em; display: block; color: #2980b9; }
 .pagination a:hover, .pagination a:focus, .pagination span:hover, .pagination span:focus { background-color: #2980b9; color: #fff; }
 .pagination .current { cursor: default; color: #000000; }
@@ -516,42 +531,36 @@ keep this file as small as possible!
 /*********************
 POSTS & CONTENT STYLES
 *********************/
-#content { margin-top: 1.5em; }
-
-.hentry header { border-bottom: 1px solid #f7f7f7; padding: 1.5em; }
-.hentry footer { padding: 1.5em; border-top: 1px solid #f7f7f7; }
-.hentry footer p { margin: 0; }
+.post { margin-bottom: 1em; }
+.post footer p { margin: 0; }
 
 /* end .hentry */
-.single-title, .page-title, .entry-title { margin: 0; }
+.feature-thumb { display: block; background-repeat: no-repeat; background-size: 100%; background-position: center center; }
+.feature-thumb:hover { background-size: 120%; }
 
-/* want to style individual post classes? Booya! */
-/* post by id (i.e. post-3) */
-/* general post style */
-/* general article on a page style */
-/* general style on an attatchment */
-/* sticky post style */
-/* hentry class */
-/* style by category (i.e. category-videos) */
-/* style by tag (i.e. tag-news) */
-/* post meta */
-.byline { color: #9fa6b4; font-style: italic; margin: 0; }
+.entry-title { margin-bottom: 0; }
+
+.entry-meta { margin: 0; font-size: .9em; font-style: italic; color: #cccccc; }
+
+.article-header { padding: 0 1.5em; }
+
+.article-footer { padding: 0 1.5em 1.5em 1.5em; }
 
 /* entry content */
-.entry-content { padding: 1.5em 1.5em 0; /*
+.entry-content { padding: 1.5em; /*
 image alignment on a screen this size may be
 a bit difficult. It's set to start aligning
 and floating images at the next breakpoint,
 but it's up to you. Feel free to change it up.
 */ }
 .entry-content p { margin: 0 0 1.5em; }
-.entry-content table { width: 100%; border: 1px solid #dddddd; margin-bottom: 1.5em; }
+.entry-content table { width: 100%; border: 1px solid #cccccc; margin-bottom: 1.5em; }
 .entry-content table caption { margin: 0 0 7px; font-size: 0.75em; color: #9fa6b4; text-transform: uppercase; letter-spacing: 1px; }
-.entry-content tr { border-bottom: 1px solid #dddddd; }
+.entry-content tr { border-bottom: 1px solid #cccccc; }
 .entry-content tr:nth-child(even) { background-color: #f7f7f7; }
-.entry-content td { padding: 7px; border-right: 1px solid #dddddd; }
+.entry-content td { padding: 7px; border-right: 1px solid #cccccc; }
 .entry-content td:last-child { border-right: 0; }
-.entry-content th { background-color: #f7f7f7; border-bottom: 1px solid #dddddd; border-right: 1px solid #dddddd; }
+.entry-content th { background-color: #f7f7f7; border-bottom: 1px solid #cccccc; border-right: 1px solid #cccccc; }
 .entry-content th:last-child { border-right: 0; }
 .entry-content blockquote { margin: 0 0 1.5em 0.75em; padding: 0 0 0 0.75em; border-left: 3px solid #2980b9; font-style: italic; color: #9fa6b4; }
 .entry-content dd { margin-left: 0; font-size: 0.9em; color: #787878; margin-bottom: 1.5em; }
@@ -570,6 +579,33 @@ but it's up to you. Feel free to change it up.
 /* gallery caption styles */
 .tags { margin: 0; }
 
+/* home page */
+.home .wrap { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; padding: 0 1em; }
+.home img { width: 100%; }
+.home .post { width: 100%; }
+.home .post-sizing { width: 100%; }
+.home .post-gutter { width: 0; }
+
+.single .article-header { background-repeat: no-repeat; background-size: cover; background-position: center; height: 80vh; font-size: 0; text-align: center; }
+.single .article-header:before { content: ''; height: 100%; width: 0; display: inline-block; vertical-align: middle; }
+.single .article-header .article-heder-inner { display: inline-block; vertical-align: middle; color: #fff; }
+.single .article-header .entry-title { font-size: 3rem; }
+.single .article-header .entry-meta { font-size: .9rem; color: #fff; }
+.single .entry-content .main-content { font-size: 120%; }
+
+@media (min-width: 768px) { .home { /* home page */ }
+  .home .post { width: 48%; }
+  .home .post-sizing { width: 48%; }
+  .home .post-gutter { width: 4%; } }
+@media (min-width: 1024px) { .home { /* home page */ }
+  .home .post { width: 32%; }
+  .home .post-sizing { width: 32%; }
+  .home .post-gutter { width: 2%; }
+  .single .entry-content .main-content { width: 700px; margin: 0 auto; } }
+@media (min-width: 1440px) { .home { /* home page */ }
+  .home .post { width: 24%; }
+  .home .post-sizing { width: 24%; }
+  .home .post-gutter { width: 1.33%; } }
 /******************************************************************
 COMMENT STYLES
 ******************************************************************/

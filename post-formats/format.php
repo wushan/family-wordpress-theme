@@ -13,27 +13,30 @@
                  * folder and replace the function below with the contents of the "format.php" file.
                 */
               ?>
-
+              <?php
+                  $featuredImage = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+              ?>
               <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-              <?php the_post_thumbnail( 'full' ); ?>
-                <header class="article-header entry-header">
+                
+                <header class="article-header entry-header" style="background-image: url('<?php echo $featuredImage[0]; ?>');">
+                  <div class="article-heder-inner">
+                    <h1 class="entry-title single-title" itemprop="headline" rel="bookmark"><?php the_title(); ?></h1>
 
-                  <h1 class="entry-title single-title" itemprop="headline" rel="bookmark"><?php the_title(); ?></h1>
+                    <p class="entry-meta">
 
-                  <p class="byline entry-meta vcard">
+                      <?php printf( __( 'Posted', 'bonestheme' ).' %1$s %2$s',
+                         /* the time the post was published */
+                         '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>',
+                         /* the author of the post */
+                         '<span class="by">'.__( 'by', 'bonestheme' ).'</span> <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span>'
+                      ); ?>
 
-                    <?php printf( __( 'Posted', 'bonestheme' ).' %1$s %2$s',
-                       /* the time the post was published */
-                       '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>',
-                       /* the author of the post */
-                       '<span class="by">'.__( 'by', 'bonestheme' ).'</span> <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span>'
-                    ); ?>
-
-                  </p>
-
+                    </p>
+                  </div>
                 </header> <?php // end article header ?>
 
-                <section class="entry-content cf" itemprop="articleBody">
+                <section class="entry-content" itemprop="articleBody">
+                  <div class="main-content">
                   <?php
                     // the content (pretty self explanatory huh)
                     the_content();
@@ -57,6 +60,7 @@
                       'link_after'  => '</span>',
                     ) );
                   ?>
+                  </div>
                 </section> <?php // end article section ?>
 
                 <footer class="article-footer">
