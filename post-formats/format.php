@@ -14,7 +14,7 @@
                 */
               ?>
               <?php
-                  $featuredImage = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+                  $featuredImage = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'ms-feature-bg' );
               ?>
               <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
                 

@@ -123,7 +123,12 @@ jQuery(document).ready(function($) {
     itemSelector: '.post',
     percentPosition: true
   });
-
+  //SlideBar Trigger
+  (function($) {
+    $(document).ready(function() {
+      $.slidebars();
+    });
+  }) (jQuery);
   $(".entry-content").fitVids();
 
 

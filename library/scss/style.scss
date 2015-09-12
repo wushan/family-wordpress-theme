@@ -56,7 +56,7 @@ http://thesassway.com/advanced/modular-css-naming-conventions
 @import "components/buttons";
 // forms (inputs & labels)
 @import "components/forms";
-
+@import "components/icons";
 /*********************
 BASE (MOBILE) SIZE
 This are the mobile styles. It's what people see on their phones. If
@@ -71,6 +71,9 @@ the other stylesheets. Remember, keep it light: Speed is Important.
 @import "comments";
 @import "sidebar";
 
+
+//Vendor
+@import "vendor/slidebars";
 /*********************
 PRINT STYLESHEET
 Feel free to customize this. Remember to add things that won't make

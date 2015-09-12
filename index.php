@@ -5,7 +5,6 @@
 				<div id="inner-content" class="wrap">
 
 						<main id="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
-
 							<div class='masonry-wrapper'>
 								<div class="post-sizing"></div>
 								<div class="post-gutter"></div>
@@ -53,7 +52,7 @@
 
 								<?php endwhile; ?>
 
-										<?php bones_page_navi(); ?>
+										
 
 								<?php else : ?>
 
@@ -72,6 +71,7 @@
 								<?php endif; ?>
 
 							</div>
+							<?php bones_page_navi(); ?>
 						</main>
 
 				</div>

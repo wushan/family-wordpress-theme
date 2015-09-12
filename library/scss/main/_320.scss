@@ -25,9 +25,11 @@ POSTS & CONTENT STYLES
 	background-repeat: no-repeat;
 	background-size: 100%;
 	background-position: center center;
+	@include filter(grayscale(100%));
 	@extend .transition-slow;
 	&:hover {
 		background-size: 120%;
+		@include filter(grayscale(0%));
 	}
 }
 //entry title
@@ -235,6 +237,9 @@ POSTS & CONTENT STYLES
 		width: 100%;
 	}
 	//Masonry Setting
+	.masonry-wrapper {
+		@extend .clr;
+	}
 	.post {
 		width: 100%;
 	}

@@ -40,6 +40,12 @@ function bones_ahoy() {
   add_filter( 'wp_head', 'bones_remove_wp_widget_recent_comments_style', 1 );
   // clean up comment styles in the head
   add_action( 'wp_head', 'bones_remove_recent_comments_style', 1 );
+  // Remove Admin wired padding
+  function remove_admin_login_header() {
+    remove_action('wp_head', '_admin_bar_bump_cb');
+  }
+  add_action('get_header', 'remove_admin_login_header');
+
   // clean up gallery output in wp
   add_filter( 'gallery_style', 'bones_gallery_style' );
 
@@ -66,14 +72,17 @@ add_action( 'after_setup_theme', 'bones_ahoy' );
 
 /************* OEMBED SIZE OPTIONS *************/
 
-if ( ! isset( $content_width ) ) {
-	$content_width = 680;
-}
+// if ( ! isset( $content_width ) ) {
+// 	$content_width = 680;
+// }
 
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes
 add_image_size( 'ms-grid', 400, 225, true );
+add_image_size( 'ms-default', 700);
+add_image_size( 'ms-feature', 1280, 720, true );
+add_image_size( 'ms-feature-bg', 1280 );
 
 /*
 to add more sizes, simply copy a line from above
@@ -99,8 +108,10 @@ add_filter( 'image_size_names_choose', 'bones_custom_image_sizes' );
 
 function bones_custom_image_sizes( $sizes ) {
     return array_merge( $sizes, array(
-        'bones-thumb-600' => __('600px by 150px'),
-        'bones-thumb-300' => __('300px by 100px'),
+        'ms-grid' => __('16:9-Thumbnail'),
+        'ms-default' => __('Auto-700px'),
+        'ms-feature' => __('16:9-Feature'),
+        'ms-feature-bg' => __('16:9-FeatureBackground')
     ) );
 }
 
