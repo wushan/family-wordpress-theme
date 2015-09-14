@@ -16,8 +16,14 @@
 	.single {
 		.entry-content {
 			.main-content {
-				width: 700px;
+				width: 1000px;
 				margin: 0 auto;
+			}
+			p {
+				padding: 0 150px;
+			}
+			h1,h2,h3,h4,h5 {
+				padding: 0 150px;
 			}
 		}
 	}

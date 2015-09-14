@@ -31,8 +31,8 @@ body#tinymce.wp-editor {
 	// import mixins
 	@import "components/mixins";
 
-	width: 731px;
-	font-family: $sans-serif;
+	// width: 731px;
+	font-family: $serif;
 	font-size: 100%;
 	line-height: 1.5;
 	color: $text-color;
@@ -101,9 +101,12 @@ body#tinymce.wp-editor {
 	}
 
 	padding: 1.5em 1.5em 0;
-
+		p, h1,h2,h3,h4,h5 {
+	    padding: 0 150px;
+		}
 		p {
 			margin: 0 0 1.5em;
+	    font-size: 22px;
 		}
 
 		table {

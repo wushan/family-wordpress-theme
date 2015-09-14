@@ -81,28 +81,9 @@ add_action( 'after_setup_theme', 'bones_ahoy' );
 // Thumbnail sizes
 add_image_size( 'ms-grid', 400, 225, true );
 add_image_size( 'ms-default', 700);
+add_image_size( 'ms-wide-default', 1000);
 add_image_size( 'ms-feature', 1280, 720, true );
 add_image_size( 'ms-feature-bg', 1280 );
-
-/*
-to add more sizes, simply copy a line from above
-and change the dimensions & name. As long as you
-upload a "featured image" as large as the biggest
-set width or height, all the other sizes will be
-auto-cropped.
-
-To call a different size, simply change the text
-inside the thumbnail function.
-
-For example, to call the 300 x 100 sized image,
-we would use the function:
-<?php the_post_thumbnail( 'bones-thumb-300' ); ?>
-for the 600 x 150 image:
-<?php the_post_thumbnail( 'bones-thumb-600' ); ?>
-
-You can change the names and dimensions to whatever
-you like. Enjoy!
-*/
 
 add_filter( 'image_size_names_choose', 'bones_custom_image_sizes' );
 
@@ -110,6 +91,7 @@ function bones_custom_image_sizes( $sizes ) {
     return array_merge( $sizes, array(
         'ms-grid' => __('16:9-Thumbnail'),
         'ms-default' => __('Auto-700px'),
+        'ms-wide-default' => __('Auto-1000px'),
         'ms-feature' => __('16:9-Feature'),
         'ms-feature-bg' => __('16:9-FeatureBackground')
     ) );
@@ -253,5 +235,12 @@ function bones_fonts() {
 }
 
 add_action('wp_enqueue_scripts', 'bones_fonts');
+
+// Remove <p> tags around image
+function filter_ptags_on_images($content){
+   return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+}
+
+add_filter('the_content', 'filter_ptags_on_images');
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>
