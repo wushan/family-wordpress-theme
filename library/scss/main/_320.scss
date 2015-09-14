@@ -52,7 +52,7 @@ POSTS & CONTENT STYLES
 /* entry content */
 .entry-content {
 	padding: 1.5em;
-
+	font-size: 22px;
 	p {
 		margin: 0 0 1.5em;
 	}
@@ -252,20 +252,37 @@ POSTS & CONTENT STYLES
 }
 
 //Single
-.single {
+.single, .page {
 	.article-header {
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
+		position: relative;
 		height: 80vh;
 		font-size: 0;
 		text-align: center;
+		
 		&:before {
 			content:'';
 			height: 100%;
 			width: 0;
 			display: inline-block;
 			vertical-align: middle;
+		}
+		&:hover {
+			.overlay {
+				@include filter(brightness(70%));
+			}
+		}
+		.overlay {
+			@extend .transition;
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			z-index: -1;
+			@include filter(brightness(50%));
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
 		}
 		.article-heder-inner {
 			display: inline-block;
@@ -280,10 +297,10 @@ POSTS & CONTENT STYLES
 			color: $white;
 		}
 	}
-	.entry-content {
-		.main-content {
-			font-size: 22px;
-			
-		}
+	.article-footer {
+		text-align: center;
+		font-size: .8em;
+		font-style: italic;
+		color: $dark-gray;
 	}
 }

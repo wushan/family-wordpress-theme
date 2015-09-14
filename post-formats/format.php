@@ -18,7 +18,8 @@
               ?>
               <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
                 
-                <header class="article-header entry-header" style="background-image: url('<?php echo $featuredImage[0]; ?>');">
+                <header class="article-header entry-header">
+                  <div class="overlay" style="background-image: url('<?php echo $featuredImage[0]; ?>');"></div>
                   <div class="article-heder-inner">
                     <h1 class="entry-title single-title" itemprop="headline" rel="bookmark"><?php the_title(); ?></h1>
 
