@@ -80,6 +80,7 @@ add_action( 'after_setup_theme', 'bones_ahoy' );
 
 // Thumbnail sizes
 add_image_size( 'ms-grid', 400, 225, true );
+add_image_size( 'ms-masonry', 400);
 add_image_size( 'ms-default', 700);
 add_image_size( 'ms-wide-default', 1000);
 add_image_size( 'ms-feature', 1280, 720, true );

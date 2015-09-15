@@ -10,11 +10,12 @@
 								<div class="post-gutter"></div>
 								<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 								<?php
-									$featuredImage = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'ms-grid' );
+									$featuredImage = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'ms-masonry' );
 								?>
 								<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
 									<a class='feature-thumb' href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>" style="background-image: url('<?php echo $featuredImage[0]; ?>');">
-										<img src="<?php echo get_template_directory_uri(); ?>/library/images/16x9-placeholder.png">
+										<!-- <img src="<?php echo get_template_directory_uri(); ?>/library/images/16x9-placeholder.png"> -->
+										<img src="<?php echo $featuredImage[0]; ?>" width="<?php echo $featuredImage[1]; ?>" height="<?php echo $featuredImage[2]; ?>">
 									</a>
 									<header class="article-header">
 										
